@@ -1,6 +1,9 @@
+server:
+  port: ${PORT}
+
 spring:
   datasource:
-    url: jdbc:postgresql://${DB_HOST:192.168.0.18}:${DB_PORT:5432}/${DB_NAME:clines}
+    url: jdbc:postgresql://${DB_HOST:192.168.0.18}:5432/${DB_NAME:clines}
     username: ${DB_USER:postgres}
     password: ${DB_PASSWORD:root}
   jpa:

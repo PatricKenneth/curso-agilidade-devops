@@ -2,8 +2,8 @@ FROM openjdk:17.0-slim-buster
 
 WORKDIR /clines
 
+ENTRYPOINT ["java","-jar","-Xmx256m","/clines/app.jar"]
+
+VOLUME ["/app/config"]
+
 COPY target/*.jar /clines/app.jar
-
-EXPOSE 8080
-
-CMD java -XX:+UseContainerSupport -Xmx512m -jar app.jar --server.port=$PORT
