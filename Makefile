@@ -1,5 +1,8 @@
+test:
+	@ ./mvnw test
+
 package: #dependencias
-	@ mvn clean install
+	@ ./mvnw clean package -DskipTests
 
 image-build: package
 	@ docker build -t caelum/clines-api .
